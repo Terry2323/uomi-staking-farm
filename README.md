@@ -51,6 +51,20 @@ Uomi Network farm Smart Contract. This project is built using HardHat, and the s
    ```
 
 ## Usage
+### Usage Example
+
+```js
+// After deploying the staking contract via HardHat:
+const uomiFarm = await ethers.getContract("uomiFarm");
+
+// To deposit 100 tokens into Pool ID 0:
+await uomiFarm.deposit(0, ethers.utils.parseUnits("100", 18));
+
+// To withdraw 50 tokens:
+await uomiFarm.withdraw(0, ethers.utils.parseUnits("50", 18));
+
+// Run tests:
+npx hardhat test
 
 ### Deposit Tokens
 
